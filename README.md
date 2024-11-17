@@ -14,6 +14,8 @@ Probably a bad idea for large workloads, but it's a good enough solution for sma
 docker-compose up
 ```
 
+<img width="1840" alt="image" src="https://github.com/user-attachments/assets/f596c33e-c1ca-4a6b-9cd0-1c5d10d2be47">
+
 Spins up a MySQL database and a couple of workers that process tasks from the database.
 In the docker-compose file:
 - The number of tasks can be changed with the `init.environment.TASKS` env value.

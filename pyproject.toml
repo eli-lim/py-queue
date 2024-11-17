@@ -1,0 +1,29 @@
+[project]
+name = "queue-py"
+version = "0.1.0"
+description = "Implementing a queue with a SQL database"
+authors = [
+    { name = "eli-lim", email = "hello@elilim.dev" }
+]
+dependencies = [
+    "aiomysql>=0.2.0",
+    "cryptography>=43.0.3",
+    "mysql-connector-python>=9.1.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
+
+[tool.rye.scripts]
+start = "docker-compose up -d && python src/init_db.py && python ./src/main.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
